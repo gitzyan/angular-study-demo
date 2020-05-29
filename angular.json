@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "material-library": {
+    "share-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/material-library",
+            "outputPath": "dist/share-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "material-library:build"
+            "browserTarget": "share-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "material-library:build:production"
+              "browserTarget": "share-demo:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "material-library:build"
+            "browserTarget": "share-demo:build"
           }
         },
         "test": {
@@ -114,15 +115,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "material-library:serve"
+            "devServerTarget": "share-demo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "material-library:serve:production"
+              "devServerTarget": "share-demo:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "material-library"
+    }
+  },
+  "defaultProject": "share-demo",
+  "cli": {
+    "analytics": "a8d5ecf8-f9cd-45a0-81ea-de7028ae05a8"
+  }
 }
