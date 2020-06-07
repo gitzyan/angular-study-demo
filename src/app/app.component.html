@@ -28,20 +28,20 @@
 <!--  </button>-->
 <!--</p>-->
 
-<p *appUnless="condition" class="unless a">
-  (A) This paragraph is displayed because the condition is false.
-</p>
+<!--<p *appUnless="condition" class="unless a">-->
+<!--  (A) This paragraph is displayed because the condition is false.-->
+<!--</p>-->
 
-<p *appUnless="!condition" class="unless b">
-  (B) Although the condition is true,
-  this paragraph is displayed because appUnless is set to false.
-</p>
+<!--<p *appUnless="!condition" class="unless b">-->
+<!--  (B) Although the condition is true,-->
+<!--  this paragraph is displayed because appUnless is set to false.-->
+<!--</p>-->
 
-<ng-template [appUnless]="condition">
-  <p class="code unless">
-    使用模版语法验证结构型指令
-  </p>
-</ng-template>
+<!--<ng-template [appUnless]="condition">-->
+<!--  <p class="code unless">-->
+<!--    使用模版语法验证结构型指令-->
+<!--  </p>-->
+<!--</ng-template>-->
 
 <!--<h4>UnlessDirective with template</h4>-->
 
@@ -56,7 +56,7 @@
 <!--  <p >template包裹</p>-->
 <!--</ng-template>-->
 
-<p *appHighlight="color">星号语法糖</p>
+<!--<p *appHighlight="color">星号语法糖</p>-->
 
 <!--ngIf-->
 <!--<div *ngIf="condition; then thenBlock else elseBlock"></div>-->
@@ -64,3 +64,13 @@
 <!--<ng-template #elseBlock>Content to render when condition is false.</ng-template>-->
 
 <!--<p [appUseHostBing]="'使用HostBinding装饰器修改innerText'">HostBinding装饰器</p>-->
+
+
+<!--<h4>Pipe Study</h4>-->
+<!--<app-fly-heros></app-fly-heros>-->
+
+<!--<h4>Async Pipe</h4>-->
+<!--<app-async-hero-message></app-async-hero-message>-->
+
+<h4>Fetch Json Pipe</h4>
+<app-fetch-json></app-fetch-json>

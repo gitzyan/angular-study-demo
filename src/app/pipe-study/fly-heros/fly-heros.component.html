@@ -1,0 +1,15 @@
+New hero:
+<input type="text" #box
+       (keyup.enter)="addHero(box.value); box.value=''"
+       placeholder="hero name">
+<button (click)="reset()">Reset</button>
+
+<h4>纯管道</h4>
+<div *ngFor="let hero of (heroes | flyHeros)">
+  {{hero.name}}
+</div>
+
+<h4>非纯管道</h4>
+<div *ngFor="let hero of (heroes | flyHerosImpure)">
+  {{hero.name}}
+</div>
